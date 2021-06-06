@@ -15,7 +15,11 @@ To get latest version on artefacts
 - Or checkout repository and then get files (this option will let you create PRs and update dataset and weights)
 	- `git clone  https://github.com/lacmus-foundation/ladd-and-weights`
 	- `dvc pull`
-- to gather dataset for training from relevant parts run `dvc repro dataset prepare`
+- to gather dataset for training from relevant parts run `dvc repro gather-LADD`
+
+## Contributing
+
+In case you'll add new imagesSet, please also update dvc.yaml and gather_LADD.sh 
 
 ## Project structure
 	\
