@@ -1,0 +1,4 @@
+[core]
+    remote = lacmus_remote
+['remote "lacmus_remote"']
+    url = ssh://ubuntu@176.99.131.182/media/data/dvcstore

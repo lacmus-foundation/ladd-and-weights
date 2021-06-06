@@ -1,0 +1,4 @@
+outs:
+- md5: 0e0d5fa91b6b8f14a500c5ffc6eab70a
+  size: 146248184
+  path: resnet50_liza_alert_prod.h5
