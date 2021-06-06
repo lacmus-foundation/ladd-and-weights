@@ -1,0 +1,4 @@
+outs:
+- md5: f5887fdc93f17e1f4c2b204896b280dc
+  size: 165729524
+  path: resnet50_FRCNN_SDD_epoch_9.pth

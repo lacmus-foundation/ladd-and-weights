@@ -1,0 +1,4 @@
+outs:
+- md5: 62d8d0def79df800be81831325a62ea6
+  size: 129210511
+  path: resnet50_SDD.pth

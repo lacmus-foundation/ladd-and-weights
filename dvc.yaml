@@ -1,0 +1,8 @@
+stages:
+  gather-LADD:
+    cmd: ./gather_LADD.sh
+    deps:
+    - dataset/LADD/
+    outs:
+    - dataset/full_train_ds:
+        cache: false
