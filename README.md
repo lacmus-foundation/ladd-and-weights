@@ -31,6 +31,10 @@ In case you'll add new imagesSet, please also update dvc.yaml and gather_LADD.sh
 			---
 			...  folders part of dataset, gathered as project evolves 
 			--- 
+		-- unmarked
+			---
+			... folders of file sets, submitted by users, but not yet included into main dataset
+			---
 	- weights 
 		-- keras-retinanet - weights for keras retina-net model (https://github.com/lacmus-foundation/lacmus/tree/master/keras_retinanet)
 		-- torch
