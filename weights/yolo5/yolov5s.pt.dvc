@@ -1,0 +1,4 @@
+outs:
+- md5: 6afd8e05c9539ba4537fd3dfe32db554
+  size: 14795158
+  path: yolov5s.pt

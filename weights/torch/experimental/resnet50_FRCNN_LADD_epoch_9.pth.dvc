@@ -1,0 +1,4 @@
+outs:
+- md5: dfec2c7f61ef2752b0270c36a5601ac5
+  size: 165729734
+  path: resnet50_FRCNN_LADD_epoch_9.pth
