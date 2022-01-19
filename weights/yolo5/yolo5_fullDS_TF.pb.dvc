@@ -1,0 +1,4 @@
+outs:
+- md5: 049171ca83a35de90b250967a6da45f8
+  size: 29070015
+  path: yolo5_fullDS_TF.pb

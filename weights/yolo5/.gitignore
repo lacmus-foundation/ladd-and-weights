@@ -1,3 +1,2 @@
-/ods_competition_5th.pt
-/ods_competition_5th_retrain.pt
-/tf2onnx_best.onnx
+/yolo5_fullDS_TF.pb
+/yolo5_fullDS_native.pt
