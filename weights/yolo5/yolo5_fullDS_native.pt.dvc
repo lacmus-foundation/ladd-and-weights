@@ -1,4 +1,4 @@
 outs:
 - md5: 5400e4d2a34d59b0deb9d7a1030decc8
   size: 14817825
-  path: ods_competition_5th_retrain.pt
+  path: yolo5_fullDS_native.pt

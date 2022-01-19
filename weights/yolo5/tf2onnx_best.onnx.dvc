@@ -1,4 +1,0 @@
-outs:
-- md5: 34a34c674ec625b7f4984851ea099000
-  size: 28969374
-  path: tf2onnx_best.onnx
