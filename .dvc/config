@@ -1,4 +1,8 @@
 [core]
-    remote = lacmus_remote
+    remote = digital_ocean
 ['remote "lacmus_remote"']
-    url = ssh://ubuntu@176.99.131.182/media/data/dvcstore
+    url = /media/proforg/Data/lacmus/dvc_store
+['remote "digital_ocean"']
+    url = s3://dvc
+    endpointurl = https://lacmus-dvc.fra1.digitaloceanspaces.com/
+    region = fra1

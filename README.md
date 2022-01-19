@@ -5,15 +5,13 @@ Metadata of Lacmus dataset and trained model weitghts tracked with dvc.
 ## Usage
 Repository in intended to sustain reproducability and versioning of the dataset and model weights, if you want just look around and play with dataset, some version of it still available at https://cloud.mail.ru/public/2k53/2bJVwYSa7
 
-In order to get ssh access to cloud storage, contact lacmus team as described on wiki
+In order to get access to cloud storage, contact lacmus team as described on wiki and put credentials to `~/.aws/`
+(or other folder and configure it with `dvc remote modify --local digital_ocean credentialpath <path_to_file>`)
 
 To get latest version on artefacts 
 - Install dvc (https://dvc.org/doc/install), simpliest way for ubuntu `snap install --classic dvc`
-- Either just download files without checking it out 
-	- Get dataset with `dvc get https://github.com/lacmus-foundation/ladd-and-weights dataset`
-	- Get model weights with `dvc get https://github.com/lacmus-foundation/ladd-and-weights weights`
-- Or checkout repository and then get files (this option will let you create PRs and update dataset and weights)
-	- `git clone  https://github.com/lacmus-foundation/ladd-and-weights`
+- Fork repository, checkout it repository and then get files (this option will let you create PRs and update dataset and weights)
+	- `git clone  https://github.com/<your_github_with_forked_repo>/ladd-and-weights`
 	- `dvc pull`
 - to gather dataset for training from relevant parts run `dvc repro gather-LADD`
 
