@@ -1,0 +1,4 @@
+outs:
+- md5: 1073d3c3aba5194e3f3a569924c222be
+  size: 15724533
+  path: yolo5_fullDS_and_IPSAR_basic_native.pt
