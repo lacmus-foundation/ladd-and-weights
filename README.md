@@ -3,7 +3,7 @@ Metadata of Lacmus dataset and trained model weitghts tracked with dvc.
 
 
 ## Usage
-Repository in intended to sustain reproducability and versioning of the dataset and model weights, if you want just look around and play with dataset, some version of it still available at https://cloud.mail.ru/public/2k53/2bJVwYSa7
+Repository in intended to sustain reproducability and versioning of the dataset and model weights.
 
 In order to get access to cloud storage, contact lacmus team as described on wiki and put credentials to `~/.aws/`
 (or other folder and configure it with `dvc remote modify --local digital_ocean credentialpath <path_to_file>`)
