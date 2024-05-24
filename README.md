@@ -5,16 +5,26 @@ Metadata of Lacmus dataset and trained model weitghts tracked with dvc.
 ## Usage
 Repository in intended to sustain reproducability and versioning of the dataset and model weights.
 
-In order to get access to cloud storage, contact lacmus team as described on wiki and put credentials to `~/.aws/`
-(or other folder and configure it with `dvc remote modify --local digital_ocean credentialpath <path_to_file>`)
+- Install our fork of [dvc](https://dvc.org), becouse original dvc has an [issue](https://github.com/iterative/dvc/issues/7303)
+```
+conda create -n lacmus-dvc python==3.9 pip
+conda activate lacmus-dvc
+git clone https://github.com/lacmus-foundation/dvc.git
+cd dvc
+pip install .
+```
 
-To get latest version on artefacts 
-- Install dvc (https://dvc.org/doc/install) with conda `conda install -c conda-forge dvc dvc-s3`
-- Unfortunately there is an issue in DVC https://github.com/iterative/dvc/issues/7303, prefenting to fetch some files. To fetch data until issue is fixed you need to apply workaround, described in issue to <your_conda_path>/envs/<your_conda_environment_name>/lib/python<your_python_version_in_this_env>/site-packages/dvc/fs/base.py  
-- Fork repository, checkout it and then get files (this option will let you create PRs and update dataset and weights)
-	- `git clone  https://github.com/<your_github_with_forked_repo>/ladd-and-weights`
-	- `dvc pull`
-- to gather LADD  from relevant parts run `dvc repro gather-LADD` to merge with heridal dataset and convert to yolov5 format for training refer to https://github.com/lacmus-foundation/lacmus-research/blob/master/extra/EDA/LADDvsIPSAR_merge_and_prepare.ipynb
+- In order to get access to cloud storage, contact lacmus team as described on wiki and get your `credentials` file.
+- Put credentials to `~/.aws/`
+- Configure dvc and get data:
+```
+git clone https://github.com/lacmus-foundation/ladd-and-weights.git
+cd ladd-and-weights
+dvc remote modify --local digital_ocean credentialpath ~/.aws/credentials
+dvc pull
+```
+
+- to gather LADD  from relevant parts run `python merge.py` to merge with heridal dataset and convert to yolov5 format for training refer to https://github.com/lacmus-foundation/lacmus-research/blob/master/extra/EDA/LADDvsIPSAR_merge_and_prepare.ipynb
 
 ## Contributing
 
