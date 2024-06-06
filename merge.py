@@ -14,7 +14,6 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         '-d', '--dir',
-        required=True,
         type=str,
         help='Directory containing LADD files',
         default='dataset'
@@ -64,7 +63,7 @@ def merge_datasets(dirs: list[str], outdir: str) -> None:
             names.append(new_name)
 
             new_annotation = os.path.join(out_annotations, f'{new_name}.xml')
-            new_image = os.path.join(out_images, f'{new_name}.jpg')
+            new_image = os.path.join(out_jpeg_images, f'{new_name}.jpg')
 
             shutil.copy(old_image, new_image)
             annotation_text = open(old_annotation, 'r').read()
@@ -73,11 +72,11 @@ def merge_datasets(dirs: list[str], outdir: str) -> None:
                 f'<filename>{new_name}</filename>'
             )
             annotation_text = annotation_text.replace(
-                f'<filename>{old_name.replace('train_', '')}</filename>',
+                f"<filename>{old_name.replace('train_', '')}</filename>",
                 f'<filename>{new_name}</filename>'
             )
             annotation_text = annotation_text.replace(
-                f'<filename>{old_name.replace('test_', '')}</filename>',
+                f"<filename>{old_name.replace('test_', '')}</filename>",
                 f'<filename>{new_name}</filename>'
             )
             open(new_annotation, 'w').write(annotation_text)
